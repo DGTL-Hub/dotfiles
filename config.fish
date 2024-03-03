@@ -7,11 +7,24 @@ end
 
 source ~/.config/fish/aliases.fish
 source ~/.config/fish/functions.fish
+source ~/.local/share/icons-in-terminal/icons.fish
+
+
+# source ~/.config/fish/mydraft/README.fish
+ source ~/.config/fish/mydrafts/prompt.fish
+# source ~/
+
+
+# ! I dont think this will exicute in fish.
+# source ~/bash/.README.sh
 
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
+
+set EDITOR "code-insiders"
+set VISUAL "code-insiders"
 
 # THEME PURE #
 # set -g async_prompt_functions _pure_prompt_git  # run this async! dope.
@@ -42,7 +55,6 @@ set -g fish_color_search_match --background=purple
 set -g fish_color_status 5f0000
 set -g fish_color_user 5f875f
 set -g fish_color_valid_path --underline
-
 set -g fish_color_dimmed 555
 set -g fish_color_separator 999
 
@@ -62,7 +74,6 @@ set -U pure_color_git_unpushed_commits (set_color yellow)
 set -U pure_color_git_unpulled_commits (set_color brgreen)
 
 # prompt (lucid)
-
 set -g lucid_prompt_symbol_error_color red
 
 # Status Chars
@@ -79,16 +90,21 @@ set __fish_git_prompt_color_upstream_behind blue
 # Local prompt customization
 set -e fish_greeting
 
-
 set -g fish_pager_color_completion normal
 set -g fish_pager_color_description 555 yellow
 set -g fish_pager_color_prefix cyan
 set -g fish_pager_color_progress cyan
 
+#cargo
+set -gx PATH $HOME/.cargo/bin $PATH
 
 # pull in all shared `export …` aka `set -gx …`
-source ~/.exports
+# source ~/.exports
 
 # TODO debug this
 # this currently messes with newlines in my prompt. lets debug it later.
 # test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
