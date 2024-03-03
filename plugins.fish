@@ -1,0 +1,10 @@
+jorgebucaran/fisher
+jorgebucaran/nvm.fish
+oh-my-fish/plugin-apt
+kuncevic/execute-dir.fish
+patrickf1/fzf.fish
+joseluisq/gitnow@2.12.0
+ilancosman/tide@v6
+eth-p/fish-cd-ranger
+veirt/web-search.fish
+yo-goto/ggl.fish
